@@ -88,8 +88,7 @@ public class JobData {
         loadData();
         ArrayList<HashMap<String, String>> jobs = new ArrayList<>();
         for (HashMap<String, String> row : allJobs) {
-            Set<String> keySet = row.keySet();
-            for (String key : keySet) {
+            for (String key : row.keySet()) {
                 if (row.get(key).toLowerCase().contains(value.toLowerCase())) {
                     jobs.add(row);
                     break;
