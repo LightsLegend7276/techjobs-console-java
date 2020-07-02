@@ -57,7 +57,7 @@ public class TechJobs {
                 // What is their search term?
                 System.out.println("\nSearch term: ");
                 String searchTerm = in.nextLine();
-
+                System.out.println();
                 if (searchField.equals("all")) {
                     printJobs(JobData.findByValue(searchTerm));
                 } else {
@@ -110,11 +110,11 @@ public class TechJobs {
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
         if (Objects.requireNonNull(someJobs).size() != 0) {
             for (HashMap<String, String> map : someJobs) {
-                System.out.println("*****");
+                System.out.println("********************");
                 for (Map.Entry<String, String> m : map.entrySet()) {
                     System.out.println(m.getKey() + ": " + m.getValue());
                 }
-                System.out.println("*****\n");
+                System.out.println("********************\n");
             }
         } else {
             System.out.println("No Results.");
